@@ -2,15 +2,20 @@
 
 * {
   font-family: "Montserrat", sans-serif;
+  font-weight: 500;
   margin: 0;
   list-style: none;
+  text-decoration: none;
 }
 
-:root {
-  --color-principale: #ff6060;
-  --footer-bg-color: black;
-  --color-text: white;
+body {
+  max-width: 1440px;
 }
+
+$color-principale: #ff6060;
+$footer-bg-color: black;
+$color-text: white;
+$color-bg-gallery: #f6f6f6;
 
 @mixin display-style {
   display: flex;
@@ -24,27 +29,33 @@
 }
 
 .navHeader {
-  @include display-style();
-  gap: 57px;
-  & a {
+  ul {
+    @include display-style();
+    gap: 57px;
+    padding: 0;
+  }
+
+  a {
     text-decoration: none;
     font-size: 24px;
-    color: var(--color-principale);
-    &:hover {
-      border-bottom: 1px solid var(--color-principale);
-    }
+    color: $color-principale;
   }
+}
+
+.nav-active {
+  border-bottom: 1px solid $color-principale;
 }
 
 .footerContainer {
   position: sticky;
   @include display-style();
   flex-direction: column;
-  background-color: var(--footer-bg-color);
-  color: var(--color-text);
+  background-color: $footer-bg-color;
+  color: $color-text;
   text-align: center;
   height: 209px;
-  & img {
+
+  img {
     margin-top: 66px;
     margin-bottom: 50px;
   }
