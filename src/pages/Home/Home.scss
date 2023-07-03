@@ -1,23 +1,13 @@
 @import "../../assets/style/index.scss";
 
-.mainHome {
-  margin: 45px;
+.homeContainer {
+  margin: 50px;
   @include display-style();
   flex-direction: column;
   gap: 45px;
-}
-
-.headerHome {
-  @include display-style();
-  justify-content: center;
-  background: url(../../assets/images/bgMain.png) center/cover
-    rgba(0, 0, 0, 0.3);
-  height: 223px;
-  border-radius: 25px;
-  width: 100%;
-  h1 {
-    font-size: 48px;
-    color: $color-text;
+  @media (max-width: 768px) {
+    margin: 20px;
+    gap: 20px;
   }
 }
 
@@ -29,10 +19,17 @@
   border-radius: 25px;
   width: 100%;
   box-sizing: border-box;
-  padding: 45px;
-  align-content: space-between;
+  padding: 50px 56px;
   justify-content: space-around;
-  .accomodations {
+  gap: 50px;
+  @media (max-width: 768px) {
+    flex-direction: column;
+    padding: 0;
+    flex-wrap: nowrap;
+    gap: 20px;
+    height: auto;
+  }
+  & .accomodations {
     @include display-style();
     flex-direction: column;
     background-color: $color-principale;
@@ -40,13 +37,13 @@
     width: 29%;
     border-radius: 10px;
     justify-content: end;
-    article {
-      height: 100%;
+    @media (max-width: 768px) {
       width: 100%;
     }
-    h3 {
-      color: $color-text;
-      font-size: 18px;
-    }
+  //   & h3 {
+  //     color: $color-text;
+  //     font-size: 18px;
+  //   }
   }
 }
+

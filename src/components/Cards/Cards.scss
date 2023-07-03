@@ -1,0 +1,18 @@
+@import "../../assets/style/index.scss";
+
+.card {
+  @include display-style();
+  flex-direction: column;
+  background-color: $color-principale;
+  height: 340px;
+  width: 29%;
+  border-radius: 10px;
+  justify-content: end;
+  @media (max-width: 768px) {
+    width: 100%;
+  }
+  & h2 {
+    color: $color-text;
+    font-size: 18px;
+  }
+}
