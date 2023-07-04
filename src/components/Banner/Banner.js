@@ -1,11 +1,11 @@
 import React from "react";
 import "../Banner/Banner.scss";
 
-const Banner = (infoBanner) => {
+const Banner = ({imageSrc, altText, title}) => {
   return (
     <div className="bannerContainer">
-      <img src={infoBanner.imageSrc} alt={infoBanner.altText} />
-      <h1>{infoBanner.title}</h1>
+      <img src={imageSrc} alt={altText} />
+      <h1>{title}</h1>
     </div>
   );
 };

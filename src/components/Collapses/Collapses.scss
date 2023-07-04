@@ -1,0 +1,41 @@
+@import "../../assets/style/index.scss";
+
+.collapse {
+  color: $color-text;
+  background-color: $color-principale;
+  border-radius: 5px;
+  margin: 30px 200px 0;
+  &.collapsed .collapse-content {
+    display: none;
+  }
+  .fa-chevron-up {
+    cursor: pointer;
+    &.rotated {
+      animation: icon-reverse 1s forwards;
+    }
+  }
+  .collapse-content {
+    border-radius: 0 0 5px 5px;
+    padding: 10px;
+    color: $color-principale;
+    background-color: $color-bg-gallery-collapse;
+    font-size: 18px;
+    transition: 0.3s;
+  }
+}
+
+.collapseHeader {
+  @include display-style();
+  justify-content: space-between;
+  padding: 10px 15px;
+  font-size: 24px;
+}
+
+@keyframes icon-reverse {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(-180deg);
+  }
+}

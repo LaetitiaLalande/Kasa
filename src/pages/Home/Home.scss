@@ -14,7 +14,7 @@
 .galleryContainer {
   @include display-style();
   flex-wrap: wrap;
-  background-color: $color-bg-gallery;
+  background-color: $color-bg-gallery-collapse;
   height: 829px;
   border-radius: 25px;
   width: 100%;
@@ -29,21 +29,15 @@
     gap: 20px;
     height: auto;
   }
-  & .accomodations {
+  .accomodations {
     @include display-style();
     flex-direction: column;
     background-color: $color-principale;
     height: 340px;
     width: 29%;
     border-radius: 10px;
-    justify-content: end;
     @media (max-width: 768px) {
       width: 100%;
     }
-  //   & h3 {
-  //     color: $color-text;
-  //     font-size: 18px;
-  //   }
   }
 }
-

@@ -6,20 +6,22 @@ import LogoKasa from "../assets/images/logo.png";
 const Header = () => {
   return (
     <div className="navContainer">
-      <img src={LogoKasa} alt="logo Kasa" className="LogoKasa"/>
+      <img src={LogoKasa} alt="logo Kasa" className="LogoKasa" />
       <nav className="navHeader">
         <ul>
           <li>
             <NavLink
               to="/"
-              className={(nav) => (nav.isActive ? "nav-active" : null)}>
+              className={(nav) => (nav.isActive ? "nav-active" : null)}
+            >
               Accueil
             </NavLink>
           </li>
           <li>
             <NavLink
               to="/About"
-              className={(nav) => (nav.isActive ? "nav-active" : null)} >
+              className={(nav) => (nav.isActive ? "nav-active" : null)}
+            >
               A propos
             </NavLink>
           </li>
