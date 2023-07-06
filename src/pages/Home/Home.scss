@@ -1,10 +1,14 @@
 @import "../../assets/style/index.scss";
 
+.homeContainer,
+#root {
+  flex-grow: 1;
+}
+
 .homeContainer {
   margin: 50px;
   @include display-style();
   flex-direction: column;
-  gap: 45px;
   @media (max-width: 768px) {
     margin: 20px;
     gap: 20px;
@@ -15,7 +19,6 @@
   @include display-style();
   flex-wrap: wrap;
   background-color: $color-bg-gallery-collapse;
-  height: 829px;
   border-radius: 25px;
   width: 100%;
   box-sizing: border-box;
@@ -28,16 +31,5 @@
     flex-wrap: nowrap;
     gap: 20px;
     height: auto;
-  }
-  .accomodations {
-    @include display-style();
-    flex-direction: column;
-    background-color: $color-principale;
-    height: 340px;
-    width: 29%;
-    border-radius: 10px;
-    @media (max-width: 768px) {
-      width: 100%;
-    }
   }
 }

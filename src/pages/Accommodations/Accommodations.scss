@@ -1,0 +1,10 @@
+@import "../../assets/style/index.scss";
+
+.accommodationContainer,
+#root {
+  flex-grow: 1;
+}
+
+h2 {
+  color: $color-principale;
+}

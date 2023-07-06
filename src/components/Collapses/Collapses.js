@@ -4,21 +4,21 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronUp } from "@fortawesome/free-solid-svg-icons";
 
 const Collapses = ({ title, children }) => {
-  const [isCollapsed, setIsCollapsed] = useState(true);
+  const [isOpenCollapse, setisOpenCollapse] = useState(false);
 
   const toggleCollapse = () => {
-    setIsCollapsed(!isCollapsed);
+    setisOpenCollapse(!isOpenCollapse);
   };
 
   return (
-    <div className={`collapse ${isCollapsed ? "collapsed" : ""}`}>
+    <div className={`collapse ${!isOpenCollapse ? "collapsed" : ""}`}>
       <div className="collapseHeader">
         <h2>{title}</h2>
-        <div className={`fa-chevron-up ${!isCollapsed ? "rotated" : ""}`} onClick={toggleCollapse}>
+        <div className="fa-chevron-up" onClick={toggleCollapse}>
           <FontAwesomeIcon icon={faChevronUp} />
         </div>
       </div>
-      {!isCollapsed && <div className="collapse-content">{children}</div>}
+      {isOpenCollapse && <div className="collapse-content">{children}</div>}
     </div>
   );
 };

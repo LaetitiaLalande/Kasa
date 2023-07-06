@@ -1,18 +1,18 @@
 @import "../../assets/style/index.scss";
 
 .collapse {
-  color: $color-text;
-  background-color: $color-principale;
   border-radius: 5px;
   margin: 30px 200px 0;
   &.collapsed .collapse-content {
     display: none;
   }
+  &.collapsed .fa-chevron-up {
+    transform: rotate(0);
+  }
   .fa-chevron-up {
+    transition: transform 0.5s;
+    transform: rotate(-90deg);
     cursor: pointer;
-    &.rotated {
-      animation: icon-reverse 1s forwards;
-    }
   }
   .collapse-content {
     border-radius: 0 0 5px 5px;
@@ -20,22 +20,18 @@
     color: $color-principale;
     background-color: $color-bg-gallery-collapse;
     font-size: 18px;
-    transition: 0.3s;
+    height: auto;
   }
-}
-
-.collapseHeader {
-  @include display-style();
-  justify-content: space-between;
-  padding: 10px 15px;
-  font-size: 24px;
-}
-
-@keyframes icon-reverse {
-  0% {
-    transform: rotate(0);
-  }
-  100% {
-    transform: rotate(-180deg);
+  .collapseHeader {
+    @include display-style();
+    justify-content: space-between;
+    color: $color-text;
+    background-color: $color-principale;
+    padding: 10px 15px;
+    border-radius: 5px;
+    h2 {
+      color: $color-text;
+      font-size: 24px;
+    }
   }
 }
