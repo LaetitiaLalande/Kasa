@@ -8,9 +8,8 @@ const Cards = () => {
   useEffect(() => {
     fetch("../cardList.json")
       .then((response) => response.json())
-      .then((data) => {
-        console.log(data);
-        setData(data);
+      .then((datas) => {
+        setData(datas);
       })
       .catch((error) => {
         console.error("Erreur lors de la récupération des données :", error);
@@ -21,10 +20,9 @@ const Cards = () => {
     <div className="cardContainer">
       {data.map((card) => (
         <Link
-          to={`/Accomodations`}
-          // to={`/Accomodations${card.id}`} renvoie vers l'id
+          to={`/Accommodations/${card.id}`}
           key={card.id}
-          className="cardAccomodation"
+          className="cardAccommodation"
         >
           <img src={card.cover} alt={card.title} />
           <h3>{card.title}</h3>
