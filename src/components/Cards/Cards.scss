@@ -5,11 +5,11 @@
   flex-wrap: wrap;
   background-color: $color-bg-gallery-collapse;
   border-radius: 25px;
-  width: 100%;
   box-sizing: border-box;
   padding: 50px 56px;
-  justify-content: space-around;
   gap: 50px;
+  justify-content: center;
+  max-width: 1240px;
   @media (max-width: 768px) {
     flex-direction: column;
     padding: 0;
@@ -21,7 +21,7 @@
 
 .cardAccommodation {
   height: 340px;
-  width: 30%;
+  width: 340px;
   border-radius: 10px;
   position: relative;
   & img {

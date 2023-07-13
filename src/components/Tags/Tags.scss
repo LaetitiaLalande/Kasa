@@ -1,0 +1,17 @@
+@import "../../assets/style/index.scss";
+
+.tagContainer {
+  @include display-style();
+  align-items: center;
+  justify-content: center;
+  background-color: $color-principale;
+  border-radius: 10px;
+  height: 25px;
+  min-width: 115px;
+  padding: 10px;
+  h3 {
+    font-weight: 500;
+    font-size: 14px;
+    color: $color-text;
+  }
+}

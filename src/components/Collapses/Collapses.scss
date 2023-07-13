@@ -3,25 +3,6 @@
 .collapse {
   border-radius: 5px;
   margin: 30px 200px 0;
-  &.collapsed .collapse-content {
-    display: none;
-  }
-  &.collapsed .fa-chevron-up {
-    transform: rotate(0);
-  }
-  .fa-chevron-up {
-    transition: transform 0.5s;
-    transform: rotate(-90deg);
-    cursor: pointer;
-  }
-  .collapse-content {
-    border-radius: 0 0 5px 5px;
-    padding: 10px;
-    color: $color-principale;
-    background-color: $color-bg-gallery-collapse;
-    font-size: 18px;
-    height: auto;
-  }
   .collapseHeader {
     @include display-style();
     justify-content: space-between;
@@ -33,5 +14,20 @@
       color: $color-text;
       font-size: 24px;
     }
+  }
+  .fa-chevron-up {
+    transform: rotate(0);
+    transition: transform 0.5s;
+    cursor: pointer;
+    &.rotated {
+      transform: rotate(-180deg);
+    }
+  }
+  .content {
+    border-radius: 0 0 5px 5px;
+    padding: 20px;
+    color: $color-principale;
+    background-color: $color-bg-gallery-collapse;
+    height: auto;
   }
 }

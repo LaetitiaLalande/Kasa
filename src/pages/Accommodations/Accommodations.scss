@@ -7,26 +7,23 @@
 
 .accommodationContainer {
   margin: 50px 45px;
-  & img {
-    border-radius: 25px;
-    height: 415px;
-    width: 100%;
-    object-fit: cover;
-  }
 }
 
 .infoContainer {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr auto;
+  margin-top: 30px;
   & h2 {
     font-size: 36px;
     color: $color-principale;
   }
+  .headerContainer {
+    @include display-style();
+    justify-content: space-between;
+  }
   & h3,
-  p {
+  p,
+  li {
     font-size: 18px;
-    color: $color-principale;
+    font-weight: 400;
   }
   & img {
     height: 64px;
@@ -36,15 +33,31 @@
   }
   & .hostContainer {
     @include display-style();
-    justify-content: flex-end;
-    text-align: right;
+    flex-direction: column;
+    gap: 21px;
+    align-items: flex-end;
+    .host {
+      @include display-style();
+      text-align: end;
+    }
     & p {
       width: 93px;
       padding-right: 10px;
     }
   }
   & .collapse {
+    width: 100%;
     margin: 0;
+  }
+  .collapseContainer {
+    @include display-style();
     gap: 76px;
+    align-items: flex-start;
+  }
+  & .tags {
+    @include display-style();
+    margin-top: 20px;
+    margin-bottom: 24px;
+    gap: 10px;
   }
 }

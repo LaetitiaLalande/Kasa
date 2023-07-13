@@ -16,10 +16,10 @@ root.render(
     <Router>
       <Header />
       <Routes>
-        <Route path="*" element={<NotFound />} />
-        <Route path="/" element={<Home />} />
-        <Route path="/About" element={<About />} />
         <Route path="/Accommodations/:id" element={<Accommodations />} />
+        <Route path="/About" element={<About />} />
+        <Route path="/" element={<Home />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />
     </Router>

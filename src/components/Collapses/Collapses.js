@@ -11,14 +11,14 @@ const Collapses = ({ title, children }) => {
   };
 
   return (
-    <div className={`collapse ${!isOpenCollapse ? "collapsed" : ""}`}>
+    <div className="collapse">
       <div className="collapseHeader">
         <h2>{title}</h2>
-        <div className="fa-chevron-up" onClick={toggleCollapse}>
-          <FontAwesomeIcon icon={faChevronUp} />
+        <div className={`fa-chevron-up ${isOpenCollapse ? "rotated" : ""}`}>
+          <FontAwesomeIcon icon={faChevronUp} onClick={toggleCollapse} />
         </div>
       </div>
-      {isOpenCollapse && <div className="collapse-content">{children}</div>}
+      {isOpenCollapse && <div className="content">{children}</div>}
     </div>
   );
 };
