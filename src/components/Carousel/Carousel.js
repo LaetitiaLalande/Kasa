@@ -4,7 +4,7 @@ import { useParams } from "react-router-dom";
 import vectorLeft from "../../assets/images/vectorLeft.svg";
 import vectorRight from "../../assets/images/vectorRight.svg";
 
-const Carousel = () => {
+const Carousel = ({ picturesLength }) => {
   const [picture, setPicture] = useState(0);
   const { id } = useParams();
   const [data, setData] = useState([]);
@@ -13,7 +13,6 @@ const Carousel = () => {
     fetch(`../cardList.json`)
       .then((response) => response.json())
       .then((datas) => {
-        console.log(datas);
         setData(datas);
       })
       .catch((error) => {
@@ -22,11 +21,11 @@ const Carousel = () => {
   }, []);
 
   const prevPicture = () => {
-    setPicture(picture === 0 ? picture.length - 1 : picture - 1);
+    setPicture(picture === 0 ? picturesLength - 1 : picture - 1);
   };
 
   const nextPicture = () => {
-    setPicture(picture === picture.length ? 0 : picture + 1);
+    setPicture(picture === picturesLength - 1 ? 0 : picture + 1);
   };
 
   return (

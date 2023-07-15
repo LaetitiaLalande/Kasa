@@ -14,7 +14,6 @@ const Accommodations = () => {
     fetch(`../cardList.json`)
       .then((response) => response.json())
       .then((datas) => {
-        console.log(datas);
         setData(datas);
       })
       .catch((error) => {
@@ -28,7 +27,7 @@ const Accommodations = () => {
         .filter((card) => card.id === id)
         .map((card) => (
           <div key={card.id}>
-            <Carousel />
+            <Carousel picturesLength={card.pictures.length} />
 
             <div className="infoContainer">
               <div className="headerContainer">

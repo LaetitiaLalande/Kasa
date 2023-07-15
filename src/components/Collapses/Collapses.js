@@ -18,7 +18,9 @@ const Collapses = ({ title, children }) => {
           <FontAwesomeIcon icon={faChevronUp} onClick={toggleCollapse} />
         </div>
       </div>
-      {isOpenCollapse && <div className="content">{children}</div>}
+      <div className={`content ${isOpenCollapse ? "animate" : ""}`}>
+        {children}
+      </div>
     </div>
   );
 };
