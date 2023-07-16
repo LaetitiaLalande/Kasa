@@ -9,6 +9,7 @@
     background-color: $color-principale;
     padding: 10px 15px;
     border-radius: 5px;
+    height: 52px;
     h2 {
       color: $color-text;
       font-size: 24px;
@@ -33,10 +34,32 @@
     p,
     ul {
       padding: 20px;
+      font-size: 18px;
+      font-weight: 400;
     }
     &.animate {
       height: auto;
       transform: scaleY(1);
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .collapse {
+    margin: 0;
+    margin-bottom: 20px;
+    & .collapseHeader {
+      height: 30px;
+      & h2 {
+        font-size: 13px;
+      }
+    }
+    .content {
+      p,
+      ul {
+        font-size: 12px;
+        padding: 13px 20px 19px;
+      }
     }
   }
 }

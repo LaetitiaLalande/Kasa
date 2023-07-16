@@ -73,7 +73,8 @@ $color-bg-gallery-collapse: #f6f6f6;
 
 @media (max-width: 768px) {
   .navContainer {
-    margin: 20px;
+    margin: 20px ;
+    margin-bottom: 0;
     & img {
       height: 47px;
     }

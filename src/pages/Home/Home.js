@@ -10,9 +10,10 @@ const Home = () => {
       <Banner
         imageSrc={bgHome}
         altText="falaise en bord de mer"
-        title="Chez vous, et partout ailleurs"
+        title="Chez vous, 
+        et partout ailleurs"
       />
-        <Cards />
+      <Cards />
     </section>
   );
 };

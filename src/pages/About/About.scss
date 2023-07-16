@@ -7,11 +7,19 @@
 
 .aboutContainer {
   margin: 38px 45px;
-  @media (max-width: 768px) {
-    margin: 20px;
-  }
-  p {
-    font-size: 18px;
-    font-weight: 400;
+}
+
+@media (max-width: 768px) {
+  .aboutContainer {
+    margin: 19px;
+    margin-bottom: 0;
+    & .bannerContainer {
+      margin-bottom: 19px;
+      height: 223px;
+      width: 100%;
+      & img {
+        height: 223px;
+      }
+    }
   }
 }

@@ -28,3 +28,24 @@
     right: 23px;
   }
 }
+
+@media (max-width: 768px) {
+  .carouselContainer {
+    width: auto;
+    height: 255px;
+    & .pictureCarousel {
+      height: 255px;
+    }
+    & .fa-chevron-left,
+    .fa-chevron-right {
+      height: 24px;
+      width: 24px;
+    }
+    & .fa-chevron-left {
+      left: 0;
+    }
+    & .fa-chevron-right {
+      right: 0;
+    }
+  }
+}

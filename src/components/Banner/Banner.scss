@@ -7,9 +7,6 @@
   width: 100%;
   justify-content: center;
   margin-bottom: 38px;
-  @media (max-width: 768px) {
-    height: 111px;
-  }
   & img {
     border-radius: 25px;
     height: 223px;
@@ -17,15 +14,22 @@
     object-fit: cover;
     position: absolute;
     filter: brightness(70%) opacity(0.7);
-    @media (max-width: 768px) {
-      height: 111px;
-    }
   }
   & h1 {
     position: relative;
     font-size: 48px;
     color: $color-text;
-    @media (max-width: 768px) {
+  }
+}
+
+@media (max-width: 768px) {
+  .bannerContainer {
+    height: 111px;
+    margin-bottom: 22px;
+    & img {
+      height: 111px;
+    }
+    & h1 {
       font-size: 24px;
       padding: 20px;
     }
