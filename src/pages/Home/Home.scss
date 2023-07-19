@@ -1,11 +1,7 @@
 @import "../../assets/style/index.scss";
 
-.homeContainer,
-#root {
-  flex-grow: 1;
-}
-
 .homeContainer {
+  flex: 1;
   margin: 50px;
   @include display-style();
   flex-direction: column;

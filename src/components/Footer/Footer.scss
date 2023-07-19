@@ -1,0 +1,27 @@
+@import "../../assets/style/index.scss";
+
+.footerContainer {
+  flex-shrink: 0;
+  @include display-style();
+  flex-direction: column;
+  background-color: $footer-bg-color;
+  color: $color-text;
+  text-align: center;
+  height: 209px;
+  & img {
+    margin-top: 66px;
+    margin-bottom: 50px;
+  }
+}
+
+@media (max-width: 768px) {
+  .footerContainer {
+    & img {
+      margin-bottom: 15px;
+    }
+    p {
+      font-size: 12px;
+      width: 133px;
+    }
+  }
+}

@@ -1,12 +1,8 @@
 @import "../../assets/style/index.scss";
 
-.aboutContainer,
-#root {
-  flex-grow: 1;
-}
-
 .aboutContainer {
   margin: 38px 45px;
+  flex: 1;
 }
 
 @media (max-width: 768px) {

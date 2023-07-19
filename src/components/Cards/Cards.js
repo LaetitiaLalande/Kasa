@@ -25,7 +25,9 @@ const Cards = () => {
           className="cardAccommodation"
         >
           <img src={card.cover} alt={card.title} />
-          <h3>{card.title}</h3>
+          <div className="titleCard">
+            <h3>{card.title}</h3>
+          </div>
         </Link>
       ))}
     </div>

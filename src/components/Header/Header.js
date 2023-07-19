@@ -1,7 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import "../pages/Home/Home.scss";
-import LogoKasa from "../assets/images/logo.png";
+import "../Header/Header.scss";
+import LogoKasa from "../../assets/images/logo.png";
 
 const Header = () => {
   return (
@@ -12,7 +12,7 @@ const Header = () => {
           <li>
             <NavLink
               to="/"
-              className={(nav) => (nav.isActive ? "nav-active" : null)}
+              className={(nav) => (nav.isActive ? "navActive" : "")}
             >
               Accueil
             </NavLink>
@@ -20,7 +20,7 @@ const Header = () => {
           <li>
             <NavLink
               to="/About"
-              className={(nav) => (nav.isActive ? "nav-active" : null)}
+              className={(nav) => (nav.isActive ? "navActive" : "")}
             >
               A Propos
             </NavLink>

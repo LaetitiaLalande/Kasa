@@ -1,0 +1,39 @@
+@import "../../assets/style/index.scss";
+
+.navContainer {
+  @include display-style();
+  justify-content: space-between;
+  margin: 45px 50px 0;
+  .navHeader {
+    & ul {
+      @include display-style();
+      gap: 57px;
+      padding: 0;
+    }
+    & a {
+      font-size: 24px;
+      color: $color-principale;
+    }
+  }
+  .navActive {
+    text-decoration: underline;
+  }
+}
+
+@media (max-width: 768px) {
+  .navContainer {
+    margin: 20px;
+    margin-bottom: 0;
+    & img {
+      height: 47px;
+    }
+    .navHeader {
+      & ul {
+        gap: 26px;
+        & a {
+          font-size: 12px;
+        }
+      }
+    }
+  }
+}

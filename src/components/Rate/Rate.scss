@@ -1,16 +1,23 @@
 @import "../../assets/style/index.scss";
 
-.fa-star,
-.active {
-  color: $color-principale;
-}
-
 .rateContainer {
-  text-align: end;
+  @include display-style();
+  height: 36px;
+  width: 196px;
+  justify-content: space-between;
+  & .iconStar {
+    height: 36px;
+    width: 36px;
+  }
 }
 
 @media (max-width: 768px) {
-  .fa-star {
+  .rateContainer {
+    width: 98px;
     height: 18px;
+    & .iconStar {
+      height: 18px;
+      width: 18px;
+    }
   }
 }

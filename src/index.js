@@ -1,13 +1,12 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import Home from "./pages/Home/Home";
-import About from "./pages/About/About";
+import Header from "./components/Header/Header";
 import Accommodations from "./pages/Accommodations/Accommodations";
+import About from "./pages/About/About";
+import Home from "./pages/Home/Home";
 import NotFound from "./pages/NotFound/NotFound";
-import Header from "./components/Header";
-import Footer from "./components/Footer";
-import "./assets/style/index.scss";
+import Footer from "./components/Footer/Footer";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 

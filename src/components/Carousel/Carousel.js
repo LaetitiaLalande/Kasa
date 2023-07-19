@@ -28,6 +28,9 @@ const Carousel = ({ picturesLength }) => {
     setPicture(picture === picturesLength - 1 ? 0 : picture + 1);
   };
 
+  const ChevronLeftClass =
+    picturesLength === 1 ? "fa-chevron-left hidden" : "fa-chevron-left";
+
   return (
     <div className="carouselContainer">
       {data
@@ -37,7 +40,7 @@ const Carousel = ({ picturesLength }) => {
             <img
               src={vectorLeft}
               alt="chevron gauche"
-              className="fa-chevron-left"
+              className={ChevronLeftClass}
               onClick={prevPicture}
             />
             <img
@@ -45,10 +48,19 @@ const Carousel = ({ picturesLength }) => {
               alt={card.title}
               className="pictureCarousel"
             />
+            <div
+              className={`numberPicture ${
+                picturesLength === 1 ? "hidden" : ""
+              }`}
+            >
+              {picture + 1}/{picturesLength}
+            </div>
             <img
               src={vectorRight}
               alt="chevron droit"
-              className="fa-chevron-right"
+              className={`fa-chevron-right ${
+                picturesLength === 1 ? "hidden" : ""
+              }`}
               onClick={nextPicture}
             />
           </div>
