@@ -5,8 +5,9 @@
   flex: 1;
   @include display-style();
   flex-direction: column;
-  .collapse{
+  .collapse {
     margin: 30px 108.5px 0;
+    max-width: 1023px;
   }
 }
 
@@ -15,12 +16,11 @@
     margin: 19px 20px;
     & .bannerContainer {
       height: 223px;
-      max-width: 335px;
       & img {
         height: 223px;
       }
     }
-    .collapse{
+    .collapse {
       margin: 20px 0 0;
     }
   }

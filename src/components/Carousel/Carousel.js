@@ -1,24 +1,10 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import "../Carousel/Carousel.scss";
-import { useParams } from "react-router-dom";
 import vectorLeft from "../../assets/images/vectorLeft.svg";
 import vectorRight from "../../assets/images/vectorRight.svg";
 
-const Carousel = ({ picturesLength }) => {
+const Carousel = ({ picturesLength, imageSrc, altText }) => {
   const [picture, setPicture] = useState(0);
-  const { id } = useParams();
-  const [data, setData] = useState([]);
-
-  useEffect(() => {
-    fetch(`../cardList.json`)
-      .then((response) => response.json())
-      .then((datas) => {
-        setData(datas);
-      })
-      .catch((error) => {
-        console.error("Erreur lors de la récupération des données :", error);
-      });
-  }, []);
 
   const prevPicture = () => {
     setPicture(picture === 0 ? picturesLength - 1 : picture - 1);
@@ -30,40 +16,22 @@ const Carousel = ({ picturesLength }) => {
 
   return (
     <div className="carouselContainer">
-      {data
-        .filter((card) => card.id === id)
-        .map((card) => (
-          <div key={card.id}>
-            <img
-              src={vectorLeft}
-              alt="chevron gauche"
-              className={`fa-chevron-left ${
-                picturesLength === 1 ? "hidden" : ""
-              }`}
-              onClick={prevPicture}
-            />
-            <img
-              src={card.pictures[picture]}
-              alt={card.title}
-              className="pictureCarousel"
-            />
-            <div
-              className={`numberPicture ${
-                picturesLength === 1 ? "hidden" : ""
-              }`}
-            >
-              {picture + 1}/{picturesLength}
-            </div>
-            <img
-              src={vectorRight}
-              alt="chevron droit"
-              className={`fa-chevron-right ${
-                picturesLength === 1 ? "hidden" : ""
-              }`}
-              onClick={nextPicture}
-            />
-          </div>
-        ))}
+      <img
+        src={vectorLeft}
+        alt="chevron gauche"
+        className={`fa-chevron-left ${picturesLength === 1 ? "hidden" : ""}`}
+        onClick={prevPicture}
+      />
+      <img src={imageSrc[picture]} alt={altText} className="pictureCarousel" />
+      <div className={`numberPicture ${picturesLength === 1 ? "hidden" : ""}`}>
+        {picture + 1}/{picturesLength}
+      </div>
+      <img
+        src={vectorRight}
+        alt="chevron droit"
+        className={`fa-chevron-right ${picturesLength === 1 ? "hidden" : ""}`}
+        onClick={nextPicture}
+      />
     </div>
   );
 };

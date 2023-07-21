@@ -11,7 +11,7 @@ const Home = () => {
         imageSrc={bgHome}
         altText="falaise en bord de mer"
         title="Chez vous, 
-        et partout ailleurs"
+        partout et ailleurs"
       />
       <Cards />
     </section>

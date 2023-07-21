@@ -8,7 +8,7 @@
   box-sizing: border-box;
   padding: 56px 50px 43px;
   gap: 50px;
-  justify-content: space-between;
+  justify-content: center;
   max-width: 1240px;
   .cardAccommodation {
     height: 340px;
@@ -41,6 +41,27 @@
         left: 0x;
         padding: 20px;
       }
+    }
+  }
+}
+
+.spinner {
+  border: 2px solid transparent;
+  border-top: 2px solid #3498db; /* Couleur du sablier (bleu dans cet exemple) */
+  border-right: 2px solid #3498db;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  animation: spinnerAnimation 1s linear infinite;
+  @keyframes spinnerAnimation {
+    0% {
+      transform: rotate(0deg);
+    }
+    50% {
+      transform: rotate(180deg);
+    }
+    100% {
+      transform: rotate(360deg);
     }
   }
 }

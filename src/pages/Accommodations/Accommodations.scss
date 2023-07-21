@@ -3,12 +3,17 @@
 .accommodationContainer {
   flex: 1;
   margin: 50px 100px;
+  @include display-style();
+  flex-direction: column;
   .infoContainer {
     margin-top: 30px;
+    max-width: 1240px;
     .headerContainer {
       @include display-style();
+      align-items: normal;
       justify-content: space-between;
       color: $color-principale;
+      height: 100%;
       .titleContainer {
         & h1 {
           font-size: 36px;
@@ -16,35 +21,13 @@
         & h2 {
           font-size: 18px;
         }
-        & .tagsContainer {
-          @include display-style();
-          margin: 20px 0 25px;
-          gap: 10px;
-          min-width: 115px;
-        }
       }
     }
     & .hostContainer {
       @include display-style();
       flex-direction: column;
-      gap: 20px;
+      justify-content: space-between;
       align-items: flex-end;
-      height: auto;
-      .host {
-        @include display-style();
-        gap: 10px;
-        & p {
-          font-size: 18px;
-          width: 93px;
-          text-align: end;
-        }
-        & .hostImage {
-          height: 64px;
-          width: 64px;
-          object-fit: cover;
-          border-radius: 64px;
-        }
-      }
     }
     .collapseContainer {
       @include display-style();
@@ -56,6 +39,27 @@
           font-size: 18px;
         }
       }
+    }
+  }
+}
+
+.spinner {
+  border: 2px solid transparent;
+  border-top: 2px solid #3498db; /* Couleur du sablier (bleu dans cet exemple) */
+  border-right: 2px solid #3498db;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  animation: spinnerAnimation 1s linear infinite;
+  @keyframes spinnerAnimation {
+    0% {
+      transform: rotate(0deg);
+    }
+    50% {
+      transform: rotate(180deg);
+    }
+    100% {
+      transform: rotate(360deg);
     }
   }
 }
@@ -76,25 +80,12 @@
           & h2 {
             font-size: 14px;
           }
-          .tagsContainer {
-            margin: 10px 0 16px;
-            flex-wrap: wrap;
-          }
         }
         .hostContainer {
           flex-direction: row-reverse;
           width: 100%;
           justify-content: space-between;
           align-items: flex-start;
-          & p {
-            font-size: 12px;
-            height: 33px;
-            width: 63px;
-          }
-          & .hostImage {
-            height: 32px;
-            width: 32px;
-          }
         }
       }
       .collapseContainer {
@@ -103,6 +94,9 @@
         margin-top: 13px;
         .collapse {
           margin: 0;
+          h2 {
+            font-size: 13px;
+          }
         }
       }
     }

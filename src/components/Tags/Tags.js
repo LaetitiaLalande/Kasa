@@ -1,10 +1,12 @@
 import React from "react";
 import "../Tags/Tags.scss";
 
-const Tags = ({ name }) => {
+const Tags = ({ tagName }) => {
   return (
-    <div className="tag">
-      <h3>{name}</h3>
+    <div className="tagContainer">
+      {tagName.map((tag,index) =>(
+        <div key={index} className="tag"><h3>{tag}</h3></div>
+      ))}
     </div>
   );
 };
