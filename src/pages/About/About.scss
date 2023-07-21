@@ -1,21 +1,27 @@
 @import "../../assets/style/index.scss";
 
 .aboutContainer {
-  margin: 38px 45px;
+  margin: 38px 100px;
   flex: 1;
+  @include display-style();
+  flex-direction: column;
+  .collapse{
+    margin: 30px 108.5px 0;
+  }
 }
 
 @media (max-width: 768px) {
   .aboutContainer {
-    margin: 19px;
-    margin-bottom: 0;
+    margin: 19px 20px;
     & .bannerContainer {
-      margin-bottom: 19px;
       height: 223px;
-      width: 100%;
+      max-width: 335px;
       & img {
         height: 223px;
       }
+    }
+    .collapse{
+      margin: 20px 0 0;
     }
   }
 }

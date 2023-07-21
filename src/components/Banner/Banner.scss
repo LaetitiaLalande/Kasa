@@ -4,7 +4,7 @@
   position: relative;
   height: 223px;
   width: 100%;
-  margin-bottom: 38px;
+  max-width: 1240px;
   & img {
     border-radius: 25px;
     height: 223px;
@@ -24,6 +24,16 @@
     & h1 {
       font-size: 48px;
       color: $color-text;
+      padding-left: 16px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .bannerContainer {
+    & img,
+    .titleBanner {
+      border-radius: 10px;
     }
   }
 }

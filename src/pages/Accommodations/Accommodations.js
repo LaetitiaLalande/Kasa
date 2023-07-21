@@ -38,8 +38,9 @@ const Accommodations = () => {
             <div className="infoContainer">
               <div className="headerContainer">
                 <div className="titleContainer">
-                  <h2>{card.title}</h2>
-                  <h3>{card.location}</h3>
+                  <h1>{card.title}</h1>
+                  <h2>{card.location}</h2>
+
                   <div className="tagsContainer">
                     {card.tags.map((tag, tagKey) => (
                       <Tags key={tagKey} name={tag} />
@@ -63,17 +64,9 @@ const Accommodations = () => {
               </div>
 
               <div className="collapseContainer">
-                <Collapses title="Description">
-                  <p>{card.description}</p>
-                </Collapses>
-
-                <Collapses title="Equipement">
-                  <ul>
-                    {card.equipments.map((equipment, equipmentKey) => (
-                      <li key={equipmentKey}>{equipment}</li>
-                    ))}
-                  </ul>
-                </Collapses>
+                <Collapses title="Description" description={card.description} />
+                <Collapses title="Equipements" description={card.equipments}/>
+ 
               </div>
             </div>
           </div>

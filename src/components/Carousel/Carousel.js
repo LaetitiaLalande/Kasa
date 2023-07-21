@@ -28,9 +28,6 @@ const Carousel = ({ picturesLength }) => {
     setPicture(picture === picturesLength - 1 ? 0 : picture + 1);
   };
 
-  const ChevronLeftClass =
-    picturesLength === 1 ? "fa-chevron-left hidden" : "fa-chevron-left";
-
   return (
     <div className="carouselContainer">
       {data
@@ -40,7 +37,9 @@ const Carousel = ({ picturesLength }) => {
             <img
               src={vectorLeft}
               alt="chevron gauche"
-              className={ChevronLeftClass}
+              className={`fa-chevron-left ${
+                picturesLength === 1 ? "hidden" : ""
+              }`}
               onClick={prevPicture}
             />
             <img

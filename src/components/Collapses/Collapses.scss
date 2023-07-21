@@ -1,7 +1,6 @@
 @import "../../assets/style/index.scss";
 
 .collapse {
-  margin: 30px 108.5px 0;
   .collapseHeader {
     @include display-style();
     justify-content: space-between;
@@ -19,6 +18,7 @@
     transform: rotate(0);
     transition: transform 0.5s;
     cursor: pointer;
+    height: 24px;
     &.rotated {
       transform: rotate(-180deg);
     }
@@ -33,11 +33,14 @@
     transform-origin: top;
     p,
     ul {
-      padding: 20px;
+      padding: 16px 20px 20px;
+    }
+    p,
+    li {
       font-size: 18px;
       font-weight: 400;
     }
-    &.animate {
+    &.expanded {
       height: auto;
       transform: scaleY(1);
     }
@@ -54,11 +57,17 @@
         font-size: 13px;
       }
     }
+    .fa-chevron-up {
+      height: 22px;
+    }
     .content {
       p,
       ul {
-        font-size: 12px;
         padding: 13px 20px 19px;
+      }
+      p,
+      li {
+        font-size: 12px;
       }
     }
   }

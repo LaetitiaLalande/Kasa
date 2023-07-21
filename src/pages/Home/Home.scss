@@ -2,43 +2,25 @@
 
 .homeContainer {
   flex: 1;
-  margin: 50px;
+  margin: 50px 100px;
   @include display-style();
   flex-direction: column;
-  & .galleryContainer {
-    @include display-style();
-    flex-wrap: wrap;
-    background-color: $color-bg-gallery-collapse;
-    border-radius: 25px;
-    width: 100%;
-    box-sizing: border-box;
-    padding: 50px 56px;
-    justify-content: space-around;
-    gap: 50px;
-  }
+  gap: 43px;
 }
 
 @media (max-width: 768px) {
   .homeContainer {
     margin: 27px 20px;
+    gap: 22px;
     & .bannerContainer {
       width: 335px;
       height: 111px;
-      margin-bottom: 22px;
       & img {
         height: 111px;
       }
       & h1 {
         font-size: 24px;
-        padding: 20px;
       }
     }
-  }
-  .galleryContainer {
-    flex-direction: column;
-    padding: 0;
-    flex-wrap: nowrap;
-    gap: 20px;
-    height: auto;
   }
 }

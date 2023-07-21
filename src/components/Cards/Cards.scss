@@ -6,9 +6,9 @@
   background-color: $color-bg-gallery-collapse;
   border-radius: 25px;
   box-sizing: border-box;
-  padding: 50px 56px;
+  padding: 56px 50px 43px;
   gap: 50px;
-  justify-content: center;
+  justify-content: space-between;
   max-width: 1240px;
   .cardAccommodation {
     height: 340px;
