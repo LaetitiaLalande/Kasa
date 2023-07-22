@@ -7,8 +7,6 @@ const Cards = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    // const delay = 5000;
-    // setTimeout(() => {
     fetch("../cardList.json")
       .then((response) => response.json())
       .then((datas) => {
@@ -19,7 +17,6 @@ const Cards = () => {
         console.error("Erreur lors de la récupération des données :", error);
         setLoading(false);
       });
-    // }, delay);
   }, []);
 
   if (loading) {

@@ -6,15 +6,18 @@ import Cards from "../../components/Cards/Cards";
 
 const Home = () => {
   return (
-    <section className="homeContainer">
+    <div className="homeContainer">
       <Banner
         imageSrc={bgHome}
         altText="falaise en bord de mer"
-        title="Chez vous, 
-        partout et ailleurs"
+        title={
+          <h1>
+            Chez vous, <span>partout et ailleurs</span>
+          </h1>
+        }
       />
       <Cards />
-    </section>
+    </div>
   );
 };
 

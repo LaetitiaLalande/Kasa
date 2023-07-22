@@ -21,11 +21,6 @@
     top: 0;
     border-radius: 25px;
     background-color: rgba(0, 0, 0, 0.3);
-    & h1 {
-      font-size: 48px;
-      color: $color-text;
-      padding-left: 16px;
-    }
   }
 }
 
@@ -34,6 +29,10 @@
     & img,
     .titleBanner {
       border-radius: 10px;
+      justify-content: flex-start;
+    }
+    h1 {
+      line-height: 100%;
     }
   }
 }

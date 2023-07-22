@@ -6,6 +6,11 @@
   @include display-style();
   flex-direction: column;
   gap: 43px;
+  & h1 {
+    font-size: 48px;
+    color: $color-text;
+    padding-left: 16px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -20,6 +25,9 @@
       }
       & h1 {
         font-size: 24px;
+        & span {
+          display: block;
+        }
       }
     }
   }

@@ -6,7 +6,7 @@ const Banner = (props) => {
     <div className="bannerContainer">
       <img src={props.imageSrc} alt={props.altText} />
       <div className="titleBanner">
-        <h1>{props.title}</h1>
+      {props.title}
       </div>
     </div>
   );
