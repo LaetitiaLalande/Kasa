@@ -34,7 +34,7 @@ const Accommodations = () => {
   if (loading) {
     return (
       <div className="loadingContainer">
-        <div className="spinner" />
+        <p>Chargement en cours...</p>
       </div>
     );
   }

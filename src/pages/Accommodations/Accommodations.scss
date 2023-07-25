@@ -43,24 +43,16 @@
   }
 }
 
-.spinner {
-  border: 2px solid transparent;
-  border-top: 2px solid #3498db; /* Couleur du sablier (bleu dans cet exemple) */
-  border-right: 2px solid #3498db;
-  border-radius: 50%;
-  width: 20px;
-  height: 20px;
-  animation: spinnerAnimation 1s linear infinite;
-  @keyframes spinnerAnimation {
-    0% {
-      transform: rotate(0deg);
-    }
-    50% {
-      transform: rotate(180deg);
-    }
-    100% {
-      transform: rotate(360deg);
-    }
+.loadingContainer {
+  flex: 1;
+  text-align: center;
+  font-size: 76px;
+  color: $color-principale;
+  height: 400px;
+  margin: 250px 100px;
+  @media (max-width: 768px) {
+    font-size: 36px;
+    margin: 200px 50px;
   }
 }
 
