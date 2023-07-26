@@ -14,6 +14,7 @@
 @media (max-width: 768px) {
   .aboutContainer {
     margin: 19px 20px;
+    max-width: 335px;
     & .bannerContainer {
       height: 223px;
       & img {

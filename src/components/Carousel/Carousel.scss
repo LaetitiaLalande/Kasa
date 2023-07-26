@@ -2,7 +2,7 @@
 
 .carouselContainer {
   position: relative;
-  width: 1240px;
+  max-width: 1240px;
   & .pictureCarousel {
     border-radius: 25px;
     height: 415px;
@@ -37,7 +37,7 @@
     transform: translateX(-50%);
   }
   & .hidden {
-    display: none;
+    visibility: hidden;
   }
 }
 
